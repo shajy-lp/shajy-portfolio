@@ -1,0 +1,321 @@
+<app-header></app-header>
+
+<router-outlet />
+<div *ngIf="data === 'about'" style="display: flex; justify-content: center;">
+<img class="fade-in-left" src="about-name.png" alt="">
+</div>
+<div *ngIf="data === 'about'" style="display: flex; justify-content: center;margin-top: 50px;">
+  <div class="about-frame-position">
+    <div class="frame-container">
+      <img src="Frame 1.svg" style="filter: none;width: 65px;" class="frame frame1" alt="">
+      <img src="Frame 2.svg" style="filter: none;width: 65px;" class="frame frame2" alt="">
+      <img style="height: 450px;width: 80px;" class="frame frame3 " src="Frame 3.svg" alt="">
+      <img style="height: 398px;margin-bottom: 10px;" style="filter: none;width: 65px;" class="frame frame4" src="Frame 4.svg" alt="">
+      <img class="frame frame5" style="filter: none;width: 65px;" src="Frame 5.svg" alt="">
+    </div>
+  </div>
+  <img src="about-details.png" alt="">
+  </div>
+<div *ngIf="data!== 'about'" style="display: flex;justify-content: center;margin-top: 80px;gap: 260px">
+
+  @if(showShajyLancy){
+  <img class="fade-in" src="hi.svg" style="top: 37px;position: absolute;left: 20px;width: 98px;" alt="">
+  <img class="fade-in-left" src="shajy.svg" alt="">
+  }
+
+  @if(frame){
+  <div class="frame-container">
+    @if(showGloom){
+
+    <img class="heart-beat " style="position: absolute;right: 30%;" src="gloom.svg" alt="">
+    }
+
+    <img src="color1.svg" class="frame frame1" alt="">
+    <img src="color2.svg" class="frame frame2" alt="">
+    <img style="height: 450px;" class="frame frame3 " src="desk-frame3.svg" alt="">
+    <img style="height: 398px;margin-bottom: 10px;" class="frame frame4" src="color4.svg" alt="">
+    <img class="frame frame5" src="color5.svg" alt="">
+  </div>
+  }
+
+</div>
+
+<div *ngIf="data!== 'about'" [style.margin-top]="!showShajyLancy ? '800px' : '200px'" class="card-container "
+  style="display: inline-flex;justify-content: center;width: 100%;gap: 200px;">
+
+  <div>
+    <img class="glass-effect" style="box-shadow: 0 0 20px 10px rgb(140, 58, 154)" src="card-1.svg" alt="">
+    <img src="blur-im.svg" class="blur-im" alt="">
+  </div>
+  <img class="glass-effect" src="card-2.svg" alt="">
+
+</div>
+
+<div *ngIf="data!== 'about'" style="display: flex;justify-content: center;margin-top: 185px;margin-bottom: 450px;">
+  <div class="contact-me-rotate">
+    <img style="position: absolute;right: 1px;" class="hex-1" src="star-blur.svg" alt="">
+    <img class="hexagon" src="star-blur.svg" alt="">
+    <div style=" animation: rotateText 5s infinite linear;">
+      <img src="contact-me.svg" class="rotating-image-1" alt="">
+      <img (click)="showPopup()" class="arrow-r" src="arrow.svg" alt="">
+      <img class="earth" src="earth.svg" alt="">
+    </div>
+  </div>
+</div>
+<div *ngIf="loaderPopuop" class="popup">
+  <div style="width: 133px; height: 133px; position: absolute;left: 46%;top: 35%;">
+    <div style="width: 133px; height: 133px; left: 0px; top: 0px; position: absolute">
+      <div
+        style="width: 133px; height: 133px; left: 0px; top: 0px; position: absolute; border-radius: 9999px; backdrop-filter: blur(9px)">
+      </div>
+      <div class="cnt-me-rt">
+        <img src="contact-me.svg" class="rotating-image" style="position: relative;width: 310px;" alt="">
+      </div>
+    </div>
+    <div style="left: 23px;top: 75px;position: absolute;">
+      <img style="width: 96px;" src="arrow.svg" alt="">
+    </div>
+  </div>
+</div>
+<div *ngIf="popupVisible" class="popup" (click)="closePopup('blur')">
+  <section class="contact" (click)="preventClose($event)">
+    <div class="cnt-me">
+      <img src="Contact.png" class="contact-me-class" alt="">
+      <div class="details">
+        <img style="width: 500px;" src="details.png" alt="">
+      </div>
+      <div style="position: absolute;">
+        <img src="white-arr.png" (click)="navigateTo('https://www.linkedin.com/in/shajy-lancy-b14837184/')"
+          style="position: absolute;bottom: 24px;left: 191px;cursor: pointer;z-index:2;" alt="">
+      </div>
+      <div class="wall-e-small" style="position: absolute;">
+        <img src="wall-e.svg" style="width: 50px;position: absolute;top: 145px;right: 270px;" alt="">
+      </div>
+    </div>
+  </section>
+</div>
+<div *ngIf="data!== 'about'" class="skills-container">
+  <div class="water-card" style="margin-top: 300px;height: 1100px;">
+    <div class="skill-tab">
+      <img src="sskkiillss.png" style="margin-top: 25px;" alt="">
+
+    </div>
+
+    <div style="display: flex; justify-content: center;">
+      <img src="circle.svg" class="rotating-image" alt="">
+      <img src="skills.svg" class="skills" alt="">
+    </div>
+  </div>
+
+</div>
+
+
+
+<body *ngIf="data!== 'about'" style="margin-top: 300px;">
+  <div class="wall-e">
+    <img src="wall-e.svg" alt="">
+  </div>
+  <div style="position: absolute;margin-top: 120px;">
+    <img src="landing.svg" alt="">
+  </div>
+  <div>
+    <div class="wall-e-right" style="position: absolute;right: 60px;" >
+      <img  src="wall-e-right.png" alt="">
+    </div>
+    <img style="position: absolute;right: 1px;transform: translateY(120px);"  src="landing-right.png" alt="">
+  </div>
+  <div class="banner">
+    <div class="slider" style="--quantity: 10">
+      <div class="item" style="--position: 1"><img src="rt-1.svg" alt=""></div>
+      <div class="item" style="--position: 2"><img src="rt-2.svg" alt=""></div>
+      <div class="item" style="--position: 3"><img src="rt-3.svg" alt=""></div>
+      <div class="item" style="--position: 4"><img src="rt-4.svg" alt=""></div>
+      <div class="item" style="--position: 5"><img src="rt-5.svg" alt=""></div>
+      <div class="item" style="--position: 6"><img src="rt-6.svg" alt=""></div>
+      <div class="item" style="--position: 7"><img src="rt-7.svg" alt=""></div>
+      <div class="item" style="--position: 8"><img src="rt-8.svg" alt=""></div>
+      <div class="item" style="--position: 9"><img src="rt-9.svg" alt=""></div>
+      <div class="item" style="--position: 10"><img src="rt-10.svg" alt=""></div>
+    </div>
+  </div>
+
+</body>
+
+
+<div *ngIf="data!== 'about'" style="display: flex;justify-content: center;">
+  <img class="glass-effect" src="how-i-work.png" alt="">
+</div>
+
+<div *ngIf="data!== 'about'" class="my-works-text">
+  <img src="my-works-text.svg" style="margin-top: 200px;margin-bottom: 100px;" alt="">
+</div>
+<div *ngIf="data!== 'about'" style="display: flex;justify-content: center;">
+  <img src="my works.png" alt="">
+</div>
+
+<div *ngIf="data!== 'about'" class="slider-train">
+  <div class="image-track">
+    <img src="move-black-1.svg" alt="Move 1">
+    <img src="move-black-2.svg" alt="Move 2">
+    <img src="move-black-3.svg" alt="Move 3">
+    <img src="move-black-4.svg" alt="Move 4">
+    <img src="move-black-5.svg" alt="Move 5">
+    <img src="move-black-6.svg" alt="Move 6">
+    <img src="move-black-7.svg" alt="Move 7">
+    <img src="move-black-8.svg" alt="Move 8">
+    <img src="move-black-9.svg" alt="Move 9">
+    <img src="move-black-10.svg" alt="Move 10">
+    <img src="move-black-1.svg" alt="Move 1">
+    <img src="move-black-2.svg" alt="Move 2">
+    <img src="move-black-3.svg" alt="Move 3">
+    <img src="move-black-4.svg" alt="Move 4">
+    <img src="move-black-5.svg" alt="Move 5">
+    <img src="move-black-6.svg" alt="Move 6">
+    <img src="move-black-7.svg" alt="Move 7">
+    <img src="move-black-8.svg" alt="Move 8">
+    <img src="move-black-9.svg" alt="Move 9">
+    <img src="move-black-10.svg" alt="Move 10">
+  </div>
+</div>
+
+<div class="footer" *ngIf="data === 'about' ">
+  <img style="position: absolute;right: 38%;transform: translateY(-140px);" src="star-footer-2.png" alt="">
+  <img style="position: absolute;right: 31%;transform: translateY(-240px);" src="star-footer.png" alt="">
+  <img src="footer-img.svg" class="footer-img" alt="">
+  <div style="position: absolute;transform: translateY(111px);left: 179px;">
+    <span
+      style="color: var(--White, #FFF);text-align: center;font-family: Roboto;font-size: 50px;font-style: normal;font-weight: 800;line-height: 80px;margin-top: 20px;">Ready
+      to get started?</span>
+    <button class="button" (click)="showPopup()">
+      <div class="dots_border"></div>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="sparkle">
+        <path class="path" stroke-linejoin="round" stroke-linecap="round" stroke="black" fill="black"
+          d="M14.187 8.096L15 5.25L15.813 8.096C16.0231 8.83114 16.4171 9.50062 16.9577 10.0413C17.4984 10.5819 18.1679 10.9759 18.903 11.186L21.75 12L18.904 12.813C18.1689 13.0231 17.4994 13.4171 16.9587 13.9577C16.4181 14.4984 16.0241 15.1679 15.814 15.903L15 18.75L14.187 15.904C13.9769 15.1689 13.5829 14.4994 13.0423 13.9587C12.5016 13.4181 11.8321 13.0241 11.097 12.814L8.25 12L11.096 11.187C11.8311 10.9769 12.5006 10.5829 13.0413 10.0423C13.5819 9.50162 13.9759 8.83214 14.186 8.097L14.187 8.096Z">
+        </path>
+        <path class="path" stroke-linejoin="round" stroke-linecap="round" stroke="black" fill="black"
+          d="M6 14.25L5.741 15.285C5.59267 15.8785 5.28579 16.4206 4.85319 16.8532C4.42059 17.2858 3.87853 17.5927 3.285 17.741L2.25 18L3.285 18.259C3.87853 18.4073 4.42059 18.7142 4.85319 19.1468C5.28579 19.5794 5.59267 20.1215 5.741 20.715L6 21.75L6.259 20.715C6.40725 20.1216 6.71398 19.5796 7.14639 19.147C7.5788 18.7144 8.12065 18.4075 8.714 18.259L9.75 18L8.714 17.741C8.12065 17.5925 7.5788 17.2856 7.14639 16.853C6.71398 16.4204 6.40725 15.8784 6.259 15.285L6 14.25Z">
+        </path>
+        <path class="path" stroke-linejoin="round" stroke-linecap="round" stroke="black" fill="black"
+          d="M6.5 4L6.303 4.5915C6.24777 4.75718 6.15472 4.90774 6.03123 5.03123C5.90774 5.15472 5.75718 5.24777 5.5915 5.303L5 5.5L5.5915 5.697C5.75718 5.75223 5.90774 5.84528 6.03123 5.96877C6.15472 6.09226 6.24777 6.24282 6.303 6.4085L6.5 7L6.697 6.4085C6.75223 6.24282 6.84528 6.09226 6.96877 5.96877C7.09226 5.84528 7.24282 5.75223 7.4085 5.697L8 5.5L7.4085 5.303C7.24282 5.24777 7.09226 5.15472 6.96877 5.03123C6.84528 4.90774 6.75223 4.75718 6.697 4.5915L6.5 4Z">
+        </path>
+      </svg>
+      <span class="text_button" style="text-transform: uppercase;font-weight: 600;">connect me</span>
+    </button>
+    <div style="position: absolute;top: 325px;">
+      <img src="copy.svg" alt="">
+    </div>
+
+  </div>
+  <img style="position: absolute;transform: translateY(230px);" src="bottom shadow.svg" alt="">
+
+  <div class="main">
+    <div class="up">
+      <button class="card1" (click)="navigateTo('https://www.instagram.com/shajy_lancy?igsh=MTFqeWZpNzRram05ZQ==')">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256"
+          width="30px" height="30px" fill-rule="nonzero" class="instagram">
+          <g fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
+            stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+            font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+            <g transform="scale(8,8)">
+              <path
+                d="M11.46875,5c-3.55078,0 -6.46875,2.91406 -6.46875,6.46875v9.0625c0,3.55078 2.91406,6.46875 6.46875,6.46875h9.0625c3.55078,0 6.46875,-2.91406 6.46875,-6.46875v-9.0625c0,-3.55078 -2.91406,-6.46875 -6.46875,-6.46875zM11.46875,7h9.0625c2.47266,0 4.46875,1.99609 4.46875,4.46875v9.0625c0,2.47266 -1.99609,4.46875 -4.46875,4.46875h-9.0625c-2.47266,0 -4.46875,-1.99609 -4.46875,-4.46875v-9.0625c0,-2.47266 1.99609,-4.46875 4.46875,-4.46875zM21.90625,9.1875c-0.50391,0 -0.90625,0.40234 -0.90625,0.90625c0,0.50391 0.40234,0.90625 0.90625,0.90625c0.50391,0 0.90625,-0.40234 0.90625,-0.90625c0,-0.50391 -0.40234,-0.90625 -0.90625,-0.90625zM16,10c-3.30078,0 -6,2.69922 -6,6c0,3.30078 2.69922,6 6,6c3.30078,0 6,-2.69922 6,-6c0,-3.30078 -2.69922,-6 -6,-6zM16,12c2.22266,0 4,1.77734 4,4c0,2.22266 -1.77734,4 -4,4c-2.22266,0 -4,-1.77734 -4,-4c0,-2.22266 1.77734,-4 4,-4z">
+              </path>
+            </g>
+          </g>
+        </svg>
+      </button>
+      <button class="card2" (click)="navigateTo('https://www.youtube.com/channel/UCinvWjQ-gjOSN4NX3Sk20yg')">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="30px" height="30px" class="youtube">
+          <path fill="#FF0000" d="M42,14c0,0-0.438-3.107-1.785-4.478C38.107,8.438,35.662,8,35.662,8H12.338c0,0-2.445,0.438-4.553,1.522C6.438,10.893,6,14,6,14s-0.438,3.555-0.438,7.111V27c0,3.555,0.438,7.111,0.438,7.111s0.438,3.107,1.785,4.478C9.893,39.562,12.338,40,12.338,40h23.324c0,0,2.445-0.438,4.553-1.522c1.347-1.371,1.785-4.478,1.785-4.478s0.438-3.555,0.438-7.111v-5.889C42.438,17.555,42,14,42,14z"/>
+          <path fill="#FFF" d="M20 31L20 17 32 24z"/>
+        </svg>
+        
+      </button>
+    </div>
+    <div class="down">
+      <button class="card3" (click)="navigateTo('https://www.facebook.com/share/1A6443QHdt/?mibextid=wwXIfr')">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="30px" height="30px" class="facebook">
+          <path fill="#1877F2" d="M42,24c0-9.94-8.06-18-18-18S6,14.06,6,24c0,8.992,6.633,16.44,15.225,17.78V30.96h-4.582V24h4.582v-5.342c0-4.524,2.68-7.057,6.791-7.057c1.969,0,4.022,0.352,4.022,0.352v4.4h-2.265c-2.232,0-2.928,1.392-2.928,2.82V24h4.985l-0.796,6.96h-4.189v10.82C35.367,40.44,42,32.992,42,24z"/>
+        </svg>        
+      </button>
+      <button class="card4" (click)="navigateTo('https://www.linkedin.com/in/shajy-lancy-b14837184/')">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="30px" height="30px" class="linkedin">
+          <path fill="#0077B5" d="M42,4H6C4.897,4,4,4.897,4,6v36c0,1.103,0.897,2,2,2h36c1.103,0,2-0.897,2-2V6C44,4.897,43.103,4,42,4z"/>
+          <path fill="#FFF" d="M12 19H17V36H12zM14.5 12C12.57 12 11 13.57 11 15.5S12.57 19 14.5 19 18 17.43 18 15.5 16.43 12 14.5 12zM19 19H24V21.2C25 19.8 26.9 19 28.7 19 32.7 19 35 21.4 35 25.6V36H30V26.7C30 24.8 29.1 23.7 27.5 23.7 25.8 23.7 25 24.9 25 26.7V36H20V19H19z"/>
+        </svg>
+        
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="footer" *ngIf="data === 'home' || data === 'resume'">
+  <img style="position: absolute;right: 38%;transform: translateY(-140px);" src="star-footer-2.png" alt="">
+  <img style="position: absolute;right: 31%;transform: translateY(-240px);" src="star-footer.png" alt="">
+  <img src="footer-img.svg" class="footer-img" alt="">
+  <div style="position: absolute;transform: translateY(111px);left: 179px;">
+    <span
+      style="color: var(--White, #FFF);text-align: center;font-family: Roboto;font-size: 50px;font-style: normal;font-weight: 800;line-height: 80px;margin-top: 20px;">Ready
+      to get started?</span>
+    <button class="button" (click)="showPopup()">
+      <div class="dots_border"></div>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="sparkle">
+        <path class="path" stroke-linejoin="round" stroke-linecap="round" stroke="black" fill="black"
+          d="M14.187 8.096L15 5.25L15.813 8.096C16.0231 8.83114 16.4171 9.50062 16.9577 10.0413C17.4984 10.5819 18.1679 10.9759 18.903 11.186L21.75 12L18.904 12.813C18.1689 13.0231 17.4994 13.4171 16.9587 13.9577C16.4181 14.4984 16.0241 15.1679 15.814 15.903L15 18.75L14.187 15.904C13.9769 15.1689 13.5829 14.4994 13.0423 13.9587C12.5016 13.4181 11.8321 13.0241 11.097 12.814L8.25 12L11.096 11.187C11.8311 10.9769 12.5006 10.5829 13.0413 10.0423C13.5819 9.50162 13.9759 8.83214 14.186 8.097L14.187 8.096Z">
+        </path>
+        <path class="path" stroke-linejoin="round" stroke-linecap="round" stroke="black" fill="black"
+          d="M6 14.25L5.741 15.285C5.59267 15.8785 5.28579 16.4206 4.85319 16.8532C4.42059 17.2858 3.87853 17.5927 3.285 17.741L2.25 18L3.285 18.259C3.87853 18.4073 4.42059 18.7142 4.85319 19.1468C5.28579 19.5794 5.59267 20.1215 5.741 20.715L6 21.75L6.259 20.715C6.40725 20.1216 6.71398 19.5796 7.14639 19.147C7.5788 18.7144 8.12065 18.4075 8.714 18.259L9.75 18L8.714 17.741C8.12065 17.5925 7.5788 17.2856 7.14639 16.853C6.71398 16.4204 6.40725 15.8784 6.259 15.285L6 14.25Z">
+        </path>
+        <path class="path" stroke-linejoin="round" stroke-linecap="round" stroke="black" fill="black"
+          d="M6.5 4L6.303 4.5915C6.24777 4.75718 6.15472 4.90774 6.03123 5.03123C5.90774 5.15472 5.75718 5.24777 5.5915 5.303L5 5.5L5.5915 5.697C5.75718 5.75223 5.90774 5.84528 6.03123 5.96877C6.15472 6.09226 6.24777 6.24282 6.303 6.4085L6.5 7L6.697 6.4085C6.75223 6.24282 6.84528 6.09226 6.96877 5.96877C7.09226 5.84528 7.24282 5.75223 7.4085 5.697L8 5.5L7.4085 5.303C7.24282 5.24777 7.09226 5.15472 6.96877 5.03123C6.84528 4.90774 6.75223 4.75718 6.697 4.5915L6.5 4Z">
+        </path>
+      </svg>
+      <span class="text_button" style="text-transform: uppercase;font-weight: 600;">connect me</span>
+    </button>
+    <div style="position: absolute;top: 325px;">
+      <img src="copy.svg" alt="">
+    </div>
+
+  </div>
+  <img style="position: absolute;transform: translateY(230px);" src="bottom shadow.svg" alt="">
+
+  <div class="main">
+    <div class="up">
+      <button class="card1" (click)="navigateTo('https://www.instagram.com/shajy_lancy?igsh=MTFqeWZpNzRram05ZQ==')">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256"
+          width="30px" height="30px" fill-rule="nonzero" class="instagram">
+          <g fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
+            stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+            font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+            <g transform="scale(8,8)">
+              <path
+                d="M11.46875,5c-3.55078,0 -6.46875,2.91406 -6.46875,6.46875v9.0625c0,3.55078 2.91406,6.46875 6.46875,6.46875h9.0625c3.55078,0 6.46875,-2.91406 6.46875,-6.46875v-9.0625c0,-3.55078 -2.91406,-6.46875 -6.46875,-6.46875zM11.46875,7h9.0625c2.47266,0 4.46875,1.99609 4.46875,4.46875v9.0625c0,2.47266 -1.99609,4.46875 -4.46875,4.46875h-9.0625c-2.47266,0 -4.46875,-1.99609 -4.46875,-4.46875v-9.0625c0,-2.47266 1.99609,-4.46875 4.46875,-4.46875zM21.90625,9.1875c-0.50391,0 -0.90625,0.40234 -0.90625,0.90625c0,0.50391 0.40234,0.90625 0.90625,0.90625c0.50391,0 0.90625,-0.40234 0.90625,-0.90625c0,-0.50391 -0.40234,-0.90625 -0.90625,-0.90625zM16,10c-3.30078,0 -6,2.69922 -6,6c0,3.30078 2.69922,6 6,6c3.30078,0 6,-2.69922 6,-6c0,-3.30078 -2.69922,-6 -6,-6zM16,12c2.22266,0 4,1.77734 4,4c0,2.22266 -1.77734,4 -4,4c-2.22266,0 -4,-1.77734 -4,-4c0,-2.22266 1.77734,-4 4,-4z">
+              </path>
+            </g>
+          </g>
+        </svg>
+      </button>
+      <button class="card2" (click)="navigateTo('https://www.youtube.com/channel/UCinvWjQ-gjOSN4NX3Sk20yg')">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="30px" height="30px" class="youtube">
+          <path fill="#FF0000" d="M42,14c0,0-0.438-3.107-1.785-4.478C38.107,8.438,35.662,8,35.662,8H12.338c0,0-2.445,0.438-4.553,1.522C6.438,10.893,6,14,6,14s-0.438,3.555-0.438,7.111V27c0,3.555,0.438,7.111,0.438,7.111s0.438,3.107,1.785,4.478C9.893,39.562,12.338,40,12.338,40h23.324c0,0,2.445-0.438,4.553-1.522c1.347-1.371,1.785-4.478,1.785-4.478s0.438-3.555,0.438-7.111v-5.889C42.438,17.555,42,14,42,14z"/>
+          <path fill="#FFF" d="M20 31L20 17 32 24z"/>
+        </svg>
+        
+      </button>
+    </div>
+    <div class="down">
+      <button class="card3" (click)="navigateTo('https://www.facebook.com/share/1A6443QHdt/?mibextid=wwXIfr')">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="30px" height="30px" class="facebook">
+          <path fill="#1877F2" d="M42,24c0-9.94-8.06-18-18-18S6,14.06,6,24c0,8.992,6.633,16.44,15.225,17.78V30.96h-4.582V24h4.582v-5.342c0-4.524,2.68-7.057,6.791-7.057c1.969,0,4.022,0.352,4.022,0.352v4.4h-2.265c-2.232,0-2.928,1.392-2.928,2.82V24h4.985l-0.796,6.96h-4.189v10.82C35.367,40.44,42,32.992,42,24z"/>
+        </svg>        
+      </button>
+      <button class="card4" (click)="navigateTo('https://www.linkedin.com/in/shajy-lancy-b14837184/')">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="30px" height="30px" class="linkedin">
+          <path fill="#0077B5" d="M42,4H6C4.897,4,4,4.897,4,6v36c0,1.103,0.897,2,2,2h36c1.103,0,2-0.897,2-2V6C44,4.897,43.103,4,42,4z"/>
+          <path fill="#FFF" d="M12 19H17V36H12zM14.5 12C12.57 12 11 13.57 11 15.5S12.57 19 14.5 19 18 17.43 18 15.5 16.43 12 14.5 12zM19 19H24V21.2C25 19.8 26.9 19 28.7 19 32.7 19 35 21.4 35 25.6V36H30V26.7C30 24.8 29.1 23.7 27.5 23.7 25.8 23.7 25 24.9 25 26.7V36H20V19H19z"/>
+        </svg>
+        
+      </button>
+    </div>
+  </div>
+</div>
