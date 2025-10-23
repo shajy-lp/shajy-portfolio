@@ -2,7 +2,7 @@
 
 <router-outlet />
 <div *ngIf="data === 'about'" style="display: flex; justify-content: center;">
-<img class="fade-in-left" src="about-name.png" alt="">
+  <img class="fade-in-left" src="about-name.png" alt="">
 </div>
 <div *ngIf="data === 'about'" style="display: flex; justify-content: center;margin-top: 50px;">
   <div class="about-frame-position">
@@ -10,12 +10,13 @@
       <img src="Frame 1.svg" style="filter: none;width: 65px;" class="frame frame1" alt="">
       <img src="Frame 2.png" style="filter: none;width: 80px;" class="frame frame2" alt="">
       <img class="frame frame3 " style="width: 90px;" src="Frame 3.png" alt="">
-      <img style="height: 398px;margin-bottom: 10px;" style="filter: none;width: 80px;" class="frame frame4" src="Frame 4.png" alt="">
+      <img style="height: 398px;margin-bottom: 10px;" style="filter: none;width: 80px;" class="frame frame4"
+        src="Frame 4.png" alt="">
       <img class="frame frame5" style="filter: none;width: 70px;" src="Frame 5.png" alt="">
     </div>
   </div>
-  <img src="about-details.png" alt="">
-  </div>
+  <img class="abt-details" src="about-details.png" alt="">
+</div>
 <div *ngIf="data!== 'about'" style="display: flex;justify-content: center;margin-top: 80px;gap: 260px">
 
   @if(showShajyLancy){
@@ -119,10 +120,10 @@
     <img src="landing.svg" alt="">
   </div>
   <div>
-    <div class="wall-e-right" style="position: absolute;right: 60px;" >
-      <img  src="wall-e-right.png" alt="">
+    <div class="wall-e-right" style="position: absolute;right: 60px;">
+      <img src="wall-e-right.png" alt="">
     </div>
-    <img style="position: absolute;right: 1px;transform: translateY(120px);"  src="landing-right.png" alt="">
+    <img style="position: absolute;right: 1px;transform: translateY(120px);" src="landing-right.png" alt="">
   </div>
   <div class="banner">
     <div class="slider" style="--quantity: 10">
@@ -143,14 +144,14 @@
 
 
 <div *ngIf="data!== 'about'" style="display: flex;justify-content: center;">
-  <img class="glass-effect" src="how-i-work.png" alt="">
+  <img class="glass-effect-2" src="how-i-work.png" alt="">
 </div>
 
 <div *ngIf="data!== 'about'" class="my-works-text">
   <img src="my-works-text.svg" style="margin-top: 200px;margin-bottom: 100px;" alt="">
 </div>
 <div *ngIf="data!== 'about'" style="display: flex;justify-content: center;">
-  <img src="my works.png" alt="">
+  <img class="my-works" src="my works.png" alt="">
 </div>
 
 <div *ngIf="data!== 'about'" class="slider-train">
@@ -179,14 +180,14 @@
 </div>
 
 <div class="footer" *ngIf="data === 'about' ">
-  <img style="position: absolute;right: 38%;transform: translateY(-140px);" src="star-footer-2.png" alt="">
+  <img  style="position: absolute;right: 38%;transform: translateY(-140px);" src="star-footer-2.png" alt="">
   <img style="position: absolute;right: 31%;transform: translateY(-240px);" src="star-footer.png" alt="">
   <img src="footer-img.svg" class="footer-img" alt="">
-  <div style="position: absolute;transform: translateY(111px);left: 179px;">
+  <div class="ftr" style="position: absolute;transform: translateY(111px);left: 179px;">
     <span
       style="color: var(--White, #FFF);text-align: center;font-family: Roboto;font-size: 50px;font-style: normal;font-weight: 800;line-height: 80px;margin-top: 20px;">Ready
       to get started?</span>
-    <button class="button" (click)="showPopup()">
+    <button class="button conct" (click)="showPopup()">
       <div class="dots_border"></div>
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="sparkle">
         <path class="path" stroke-linejoin="round" stroke-linecap="round" stroke="black" fill="black"
@@ -226,38 +227,42 @@
       </button>
       <button class="card2" (click)="navigateTo('https://www.youtube.com/channel/UCinvWjQ-gjOSN4NX3Sk20yg')">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="30px" height="30px" class="youtube">
-          <path fill="#FF0000" d="M42,14c0,0-0.438-3.107-1.785-4.478C38.107,8.438,35.662,8,35.662,8H12.338c0,0-2.445,0.438-4.553,1.522C6.438,10.893,6,14,6,14s-0.438,3.555-0.438,7.111V27c0,3.555,0.438,7.111,0.438,7.111s0.438,3.107,1.785,4.478C9.893,39.562,12.338,40,12.338,40h23.324c0,0,2.445-0.438,4.553-1.522c1.347-1.371,1.785-4.478,1.785-4.478s0.438-3.555,0.438-7.111v-5.889C42.438,17.555,42,14,42,14z"/>
-          <path fill="#FFF" d="M20 31L20 17 32 24z"/>
+          <path fill="#FF0000"
+            d="M42,14c0,0-0.438-3.107-1.785-4.478C38.107,8.438,35.662,8,35.662,8H12.338c0,0-2.445,0.438-4.553,1.522C6.438,10.893,6,14,6,14s-0.438,3.555-0.438,7.111V27c0,3.555,0.438,7.111,0.438,7.111s0.438,3.107,1.785,4.478C9.893,39.562,12.338,40,12.338,40h23.324c0,0,2.445-0.438,4.553-1.522c1.347-1.371,1.785-4.478,1.785-4.478s0.438-3.555,0.438-7.111v-5.889C42.438,17.555,42,14,42,14z" />
+          <path fill="#FFF" d="M20 31L20 17 32 24z" />
         </svg>
-        
+
       </button>
     </div>
     <div class="down">
       <button class="card3" (click)="navigateTo('https://www.facebook.com/share/1A6443QHdt/?mibextid=wwXIfr')">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="30px" height="30px" class="facebook">
-          <path fill="#1877F2" d="M42,24c0-9.94-8.06-18-18-18S6,14.06,6,24c0,8.992,6.633,16.44,15.225,17.78V30.96h-4.582V24h4.582v-5.342c0-4.524,2.68-7.057,6.791-7.057c1.969,0,4.022,0.352,4.022,0.352v4.4h-2.265c-2.232,0-2.928,1.392-2.928,2.82V24h4.985l-0.796,6.96h-4.189v10.82C35.367,40.44,42,32.992,42,24z"/>
-        </svg>        
+          <path fill="#1877F2"
+            d="M42,24c0-9.94-8.06-18-18-18S6,14.06,6,24c0,8.992,6.633,16.44,15.225,17.78V30.96h-4.582V24h4.582v-5.342c0-4.524,2.68-7.057,6.791-7.057c1.969,0,4.022,0.352,4.022,0.352v4.4h-2.265c-2.232,0-2.928,1.392-2.928,2.82V24h4.985l-0.796,6.96h-4.189v10.82C35.367,40.44,42,32.992,42,24z" />
+        </svg>
       </button>
       <button class="card4" (click)="navigateTo('https://www.linkedin.com/in/shajy-lancy-b14837184/')">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="30px" height="30px" class="linkedin">
-          <path fill="#0077B5" d="M42,4H6C4.897,4,4,4.897,4,6v36c0,1.103,0.897,2,2,2h36c1.103,0,2-0.897,2-2V6C44,4.897,43.103,4,42,4z"/>
-          <path fill="#FFF" d="M12 19H17V36H12zM14.5 12C12.57 12 11 13.57 11 15.5S12.57 19 14.5 19 18 17.43 18 15.5 16.43 12 14.5 12zM19 19H24V21.2C25 19.8 26.9 19 28.7 19 32.7 19 35 21.4 35 25.6V36H30V26.7C30 24.8 29.1 23.7 27.5 23.7 25.8 23.7 25 24.9 25 26.7V36H20V19H19z"/>
+          <path fill="#0077B5"
+            d="M42,4H6C4.897,4,4,4.897,4,6v36c0,1.103,0.897,2,2,2h36c1.103,0,2-0.897,2-2V6C44,4.897,43.103,4,42,4z" />
+          <path fill="#FFF"
+            d="M12 19H17V36H12zM14.5 12C12.57 12 11 13.57 11 15.5S12.57 19 14.5 19 18 17.43 18 15.5 16.43 12 14.5 12zM19 19H24V21.2C25 19.8 26.9 19 28.7 19 32.7 19 35 21.4 35 25.6V36H30V26.7C30 24.8 29.1 23.7 27.5 23.7 25.8 23.7 25 24.9 25 26.7V36H20V19H19z" />
         </svg>
-        
+
       </button>
     </div>
   </div>
 </div>
 
 <div class="footer" *ngIf="data === 'home' || data === 'resume'">
-  <img style="position: absolute;right: 38%;transform: translateY(-140px);" src="star-footer-2.png" alt="">
+  <img class="star" style="position: absolute;right: 38%;transform: translateY(-140px);" src="star-footer-2.png" alt="">
   <img style="position: absolute;right: 31%;transform: translateY(-240px);" src="star-footer.png" alt="">
   <img src="footer-img.svg" class="footer-img" alt="">
-  <div style="position: absolute;transform: translateY(111px);left: 179px;">
+  <div class="ftr" style="position: absolute;transform: translateY(111px);left: 179px;">
     <span
       style="color: var(--White, #FFF);text-align: center;font-family: Roboto;font-size: 50px;font-style: normal;font-weight: 800;line-height: 80px;margin-top: 20px;">Ready
       to get started?</span>
-    <button class="button" (click)="showPopup()">
+    <button class="button conct" (click)="showPopup()">
       <div class="dots_border"></div>
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="sparkle">
         <path class="path" stroke-linejoin="round" stroke-linecap="round" stroke="black" fill="black"
@@ -297,24 +302,28 @@
       </button>
       <button class="card2" (click)="navigateTo('https://www.youtube.com/channel/UCinvWjQ-gjOSN4NX3Sk20yg')">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="30px" height="30px" class="youtube">
-          <path fill="#FF0000" d="M42,14c0,0-0.438-3.107-1.785-4.478C38.107,8.438,35.662,8,35.662,8H12.338c0,0-2.445,0.438-4.553,1.522C6.438,10.893,6,14,6,14s-0.438,3.555-0.438,7.111V27c0,3.555,0.438,7.111,0.438,7.111s0.438,3.107,1.785,4.478C9.893,39.562,12.338,40,12.338,40h23.324c0,0,2.445-0.438,4.553-1.522c1.347-1.371,1.785-4.478,1.785-4.478s0.438-3.555,0.438-7.111v-5.889C42.438,17.555,42,14,42,14z"/>
-          <path fill="#FFF" d="M20 31L20 17 32 24z"/>
+          <path fill="#FF0000"
+            d="M42,14c0,0-0.438-3.107-1.785-4.478C38.107,8.438,35.662,8,35.662,8H12.338c0,0-2.445,0.438-4.553,1.522C6.438,10.893,6,14,6,14s-0.438,3.555-0.438,7.111V27c0,3.555,0.438,7.111,0.438,7.111s0.438,3.107,1.785,4.478C9.893,39.562,12.338,40,12.338,40h23.324c0,0,2.445-0.438,4.553-1.522c1.347-1.371,1.785-4.478,1.785-4.478s0.438-3.555,0.438-7.111v-5.889C42.438,17.555,42,14,42,14z" />
+          <path fill="#FFF" d="M20 31L20 17 32 24z" />
         </svg>
-        
+
       </button>
     </div>
     <div class="down">
       <button class="card3" (click)="navigateTo('https://www.facebook.com/share/1A6443QHdt/?mibextid=wwXIfr')">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="30px" height="30px" class="facebook">
-          <path fill="#1877F2" d="M42,24c0-9.94-8.06-18-18-18S6,14.06,6,24c0,8.992,6.633,16.44,15.225,17.78V30.96h-4.582V24h4.582v-5.342c0-4.524,2.68-7.057,6.791-7.057c1.969,0,4.022,0.352,4.022,0.352v4.4h-2.265c-2.232,0-2.928,1.392-2.928,2.82V24h4.985l-0.796,6.96h-4.189v10.82C35.367,40.44,42,32.992,42,24z"/>
-        </svg>        
+          <path fill="#1877F2"
+            d="M42,24c0-9.94-8.06-18-18-18S6,14.06,6,24c0,8.992,6.633,16.44,15.225,17.78V30.96h-4.582V24h4.582v-5.342c0-4.524,2.68-7.057,6.791-7.057c1.969,0,4.022,0.352,4.022,0.352v4.4h-2.265c-2.232,0-2.928,1.392-2.928,2.82V24h4.985l-0.796,6.96h-4.189v10.82C35.367,40.44,42,32.992,42,24z" />
+        </svg>
       </button>
       <button class="card4" (click)="navigateTo('https://www.linkedin.com/in/shajy-lancy-b14837184/')">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="30px" height="30px" class="linkedin">
-          <path fill="#0077B5" d="M42,4H6C4.897,4,4,4.897,4,6v36c0,1.103,0.897,2,2,2h36c1.103,0,2-0.897,2-2V6C44,4.897,43.103,4,42,4z"/>
-          <path fill="#FFF" d="M12 19H17V36H12zM14.5 12C12.57 12 11 13.57 11 15.5S12.57 19 14.5 19 18 17.43 18 15.5 16.43 12 14.5 12zM19 19H24V21.2C25 19.8 26.9 19 28.7 19 32.7 19 35 21.4 35 25.6V36H30V26.7C30 24.8 29.1 23.7 27.5 23.7 25.8 23.7 25 24.9 25 26.7V36H20V19H19z"/>
+          <path fill="#0077B5"
+            d="M42,4H6C4.897,4,4,4.897,4,6v36c0,1.103,0.897,2,2,2h36c1.103,0,2-0.897,2-2V6C44,4.897,43.103,4,42,4z" />
+          <path fill="#FFF"
+            d="M12 19H17V36H12zM14.5 12C12.57 12 11 13.57 11 15.5S12.57 19 14.5 19 18 17.43 18 15.5 16.43 12 14.5 12zM19 19H24V21.2C25 19.8 26.9 19 28.7 19 32.7 19 35 21.4 35 25.6V36H30V26.7C30 24.8 29.1 23.7 27.5 23.7 25.8 23.7 25 24.9 25 26.7V36H20V19H19z" />
         </svg>
-        
+
       </button>
     </div>
   </div>

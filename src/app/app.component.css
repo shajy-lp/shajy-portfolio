@@ -47,12 +47,19 @@
      animation-delay: 0.9s;
  }
 
- .glass-effect {
+ .glass-effect,
+ .glass-effect-2 {
      transition: all 0.3s ease-in-out;
      box-shadow: none !important;
  }
 
  .glass-effect:hover {
+     box-shadow: 0 0 20px 3px rgb(228, 175, 237) !important;
+     border-radius: 10px;
+     transform: scale(1.02);
+ }
+
+ .glass-effect-2:hover {
      box-shadow: 0 0 20px 3px rgb(228, 175, 237) !important;
      border-radius: 10px;
      transform: scale(1.02);
@@ -280,10 +287,11 @@
      margin-left: 40px;
      animation: moveUpDown 7s ease-in-out infinite;
  }
- .wall-e-right{
-    position: absolute;
-    z-index: 1;
-    animation: moveUpDown 7s ease-in-out infinite;
+
+ .wall-e-right {
+     position: absolute;
+     z-index: 1;
+     animation: moveUpDown 7s ease-in-out infinite;
  }
 
  .wall-e-small {
@@ -428,11 +436,12 @@
 
  @media only screen and (min-width: 1500px) and (min-height: 800px) {
 
-    .about-frame-position {
-        position: absolute;
-        right: 498px;
-        transform: translateY(111px);
-    }
+     .about-frame-position {
+         position: absolute;
+         right: 498px;
+         transform: translateY(111px);
+     }
+
      .cnt-me-rt {
          width: 123.22px;
          height: 82.04px;
@@ -996,3 +1005,97 @@
  }
 
 
+ @media screen and (max-width: 767px) {
+     .fade-in {
+         left: 12px !important;
+         top: 59px !important;
+     }
+
+     .heart-beat {
+         position: absolute;
+         right: 1% !important;
+     }
+
+     .fade-in-left {
+         position: absolute !important;
+         width: 249px !important;
+         left: 90px !important;
+         margin-top: 19px !important;
+     }
+
+     .frame-container {
+         display: none !important;
+     }
+
+     .glass-effect {
+         width: 330px !important;
+     }
+
+     .glass-effect-2 {
+         width: 330px !important;
+         height: 500px !important;
+     }
+
+     .card-container {
+         display: grid !important;
+         justify-content: center !important;
+         width: 100% !important;
+         gap: 37px !important;
+         margin-top: 319px !important;
+     }
+
+     .contact-me-rotate {
+         display: none !important;
+     }
+
+     .skills-container {
+         display: none !important;
+     }
+
+     .banner {
+         bottom: 462px !important;
+     }
+
+     .wall-e,
+     .wall-e-right {
+         display: none !important;
+     }
+
+     .my-works {
+         width: 355px !important;
+         height: 500px !important;
+     }
+
+     .slider-train {
+         width: 100%;
+         overflow: hidden !important;
+         position: relative !important;
+         left: 0px !important;
+         margin-top: 100px !important;
+     }
+
+     .star {
+         position: absolute;
+         right: 9% !important;
+         transform: translateY(-155px) !important;
+     }
+
+     .main {
+         display: none !important;
+     }
+
+     .ftr {
+         position: absolute !important;
+         transform: translateY(111px) !important;
+         left: 152px !important;
+         margin-top: 71px !important;
+     }
+
+     .abt-details {
+         width: 377px;
+         margin-top: 34px;
+     }
+     .conct{
+        display: none!important;
+     }
+ }

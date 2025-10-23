@@ -1,15 +1,21 @@
 .menu-item {
-    text-align: center;
-    font-size: 16px;
-    font-family: Poppins;
-    font-weight: 400;
-    letter-spacing: 0.72px;
-    word-wrap: break-word;
-    color: #E5DCDC;
-    transition: color 0.3s ease;
-  }
+  text-align: center;
+  font-size: 16px;
+  font-family: Poppins;
+  font-weight: 400;
+  letter-spacing: 0.72px;
+  word-wrap: break-word;
+  color: #E5DCDC;
+  transition: color 0.3s ease;
+}
 
-  .menu-item:hover {
-    color: #613A73;
-    cursor: pointer;
+.menu-item:hover {
+  color: #613A73;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .head {
+    display: none !important;
   }
+}
